@@ -1,0 +1,144 @@
+@font-face {
+    font-family: 'a';
+    src: url(./42b832c93976ddd8-s.p.ttf);
+}
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+ 
+html,body{
+width: 100%;
+height: 100%;
+font-family: 'a', sans-serif;
+}
+#main{
+    width: 100%;
+}
+
+video{
+    width: 100%;
+    object-fit: cover;
+}
+
+#hero{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.video-bg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+}
+
+.video-bg video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: black;
+}
+
+.content{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    min-height: 100vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2vw;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+.content img{
+    width: 100%;
+}
+
+.content h4{
+    font-size: 1.5vw;
+    margin-top: auto;
+    margin-bottom: 6vw;
+    font-weight: 400;
+    text-align: center;
+}
+
+#menu{
+    margin: 2vw auto;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform:translateX(-50%);
+    width: min-content;
+    background-color: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 50px;
+
+}
+
+#menu a{
+    color: #ddd;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1vw;
+    padding: 0.8vw 1.5vw;
+    border-radius: 50px;
+}
+
+#menu a:hover{
+    background-color: rgba(0,0,0,0.5);
+}
+/* Parent Container Styles */
+#page2 {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 1fr;
+    height: calc(70vh + 200px);
+    min-height: 700px;
+    max-height: 1100px;
+    padding: 100px 30px;
+    position: relative;
+  }
+  
+  /* Left and Right Video Containers */
+  .video-container {
+    position: relative;
+    border-radius: 10px; /* Matches the small border radius */
+    overflow: hidden;
+    transition: grid-area 0.3s ease-in-out, transform 0.3s ease-in-out;
+    cursor: none; /* Custom Cursor Effect */
+  }
+  
+  /* Video Styles */
+  .video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* Hover Effects */
+  #page2 .video-container:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+  }
+  
+  /* Layout Changes on Hover */
+  #page2 .p2-left:hover {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+  }
+  
+  #page2 .p2-right:hover {
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+  }
+  
